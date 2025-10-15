@@ -3,6 +3,7 @@
 }
 
 .page__content {
+  flex: space-between;
   max-width: 1360px;
   margin: 0 auto;
 }
