@@ -1,9 +1,12 @@
 .page {
   background-color: #f3f3f3;
+  max-width: 1440px;
 }
 
 .page__content {
   flex: space-between;
-  max-width: 1360px;
-  margin: 0 auto;
+  width: 1360px;
+  height: 40px;
+  margin: 32px;
+  margin-left: 40px;
 }
