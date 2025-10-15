@@ -1,14 +1,14 @@
-import Footer from "../Footer/Footer";
 import "./App.css";
+import Header from "../Header/Header";
 
-const App = () => {
-  // JS code
-
+function App() {
   return (
-    <div>
-      <Footer />;
+    <div className="page">
+      <div className="page__content">
+        <Header />
+      </div>
     </div>
   );
-};
+}
 
 export default App;
