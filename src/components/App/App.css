@@ -4,9 +4,6 @@
 }
 
 .page__content {
-  flex: space-between;
-  width: 1360px;
-  height: 40px;
-  margin: 32px;
+  width: 100%;
   margin-left: 40px;
 }
