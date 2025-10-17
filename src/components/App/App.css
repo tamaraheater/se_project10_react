@@ -4,6 +4,10 @@
 }
 
 .page__content {
-  width: 100%;
-  margin-left: 40px;
+  max-width: 1360px;
+  height: 40px;
+  top: 32px;
+  left: 40px;
+  padding: 0 20px;
+  font-family: Cabinet-Grotesk, serif, sans-serif;
 }

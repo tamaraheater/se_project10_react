@@ -1,7 +1,45 @@
 .header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex: row;
+  align-items: center;
+  padding: 0 20px 0 32px;
+}
+
+.header__logo {
+  width: 89px;
   height: 40px;
-  margin-top: 32px;
+  margin-right: 24px;
+}
+
+.header__date-location {
+  width: 160px;
+  top: 11px;
+  left: 113px;
+  margin: 0;
+}
+
+.header__add-clothes-button {
+  width: 116px;
+  height: 24px;
+  top: 8px;
+  margin: 0 20px 0 auto;
+  border: none;
+}
+
+.header__user-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__username {
+  width: 157px;
+  height: 25px;
+  top: 8px;
+  margin: 0;
+}
+
+.header__avatar {
+  width: 40px;
+  border: 1px;
 }
