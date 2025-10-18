@@ -1,13 +1,14 @@
 .page {
   background-color: #f3f3f3;
   max-width: 1440px;
-  margin-top: 32px;
-  margin-left: 40px;
 }
 
 .page__content {
   max-width: 1360px;
   height: 40px;
+  margin-top: 32px;
+  margin-left: 40px;
+  margin-bottom: 100px;
   padding: 0 20px;
   font-family: "Cabinet-Grotesk-Bold", serif, sans-serif;
   font-weight: 700;
