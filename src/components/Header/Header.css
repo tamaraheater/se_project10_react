@@ -12,22 +12,24 @@
 }
 
 .header__date-location {
-  width: 160px;
+  width: fit-content;
   top: 11px;
   left: 113px;
   margin: 0;
+  font-size: 20px;
+  line-height: 1.2;
 }
 
 .header__add-clothes-button {
   width: 116px;
   height: 24px;
-  top: 8px;
   margin: 0 20px 0 auto;
   border: none;
 }
 
 .header__user-container {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 12px;
 }
@@ -35,8 +37,9 @@
 .header__username {
   width: 157px;
   height: 25px;
-  top: 8px;
   margin: 0;
+  font-size: 20px;
+  line-height: 1;
 }
 
 .header__avatar {
