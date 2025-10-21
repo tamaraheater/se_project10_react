@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className="header">
       <img src={logo} alt="Logo" className="header__logo" />
-      <p className="header__date-location">DATE, LOCATION</p>
+      <p className="header__date-location">October 21, St. Louis</p>
       <button className="header__add-clothes-button">+ Add Clothes</button>
       <div className="header__user-container">
         <p className="header__username">Terrence Tegegne</p>
