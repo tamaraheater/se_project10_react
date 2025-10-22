@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: #e9e9e9;
   width: 323px;
   height: 323px;
@@ -16,7 +17,6 @@
 
 .item-card__name {
   position: absolute;
-  justify-content: center;
   display: flex;
   top: 15px;
   background-color: #fff;
@@ -36,6 +36,5 @@
 
 .item-card__image {
   background-color: #e9e9e9;
-  max-width: 226px;
-  max-height: 226px;
+  width: 100%;
 }
