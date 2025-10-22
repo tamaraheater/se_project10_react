@@ -1,25 +1,21 @@
 .page {
   background-color: #f3f3f3;
   max-width: 1440px;
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
-  margin-right: 20px;
 }
 
 .page__content {
   max-width: 1360px;
-  max-width: 100%;
   height: auto;
-  margin-top: 32px;
-  margin-left: 40px;
-  padding: 0 20px;
+  padding: 32px 20px;
   display: flex;
   flex-direction: column;
   gap: 32px;
-  font-family: "Cabinet-Grotesk-Bold", serif, sans-serif;
+  font-family: "CabinetGrotesk-Bold";
   font-weight: 700;
   color: black;
 }

@@ -13,9 +13,9 @@ function Main({ weatherData }) {
         </h2>
         <ul className="cards__list">
           {defaultClothingItems
-            // .filter((item) => {
-            //   return item.weather === weatherData.type;
-            // })
+            .filter((item) => {
+              return item.weather === weatherData.type;
+            })
             .map((item) => {
               return <ItemCard key={item._id} item={item} />; /*Props*/
             })}
