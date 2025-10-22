@@ -1,4 +1,4 @@
-const defaultClothingItems = [
+export const defaultClothingItems = [
   {
     _id: 1,
     name: "Boot",
@@ -96,5 +96,3 @@ const defaultClothingItems = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/T-Shirt.png?etag=44ed1963c44ab19cd2f5011522c5fc09",
   },
 ];
-
-export { defaultClothingItems };
