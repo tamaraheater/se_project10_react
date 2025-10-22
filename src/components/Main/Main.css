@@ -1,0 +1,23 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  max-width: 1360px;
+}
+
+.cards__title {
+  width: 330px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.cards__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  gap: 21px;
+}

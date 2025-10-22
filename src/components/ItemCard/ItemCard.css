@@ -1,0 +1,41 @@
+.item-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #e9e9e9;
+  width: 323px;
+  height: 323px;
+  border-width: 1px;
+  border: color #000, opacity 30%, transition 3s;
+  border-radius: 12px;
+}
+
+/* .item-card:hover {
+   opacity: 1.0; 
+} */
+
+.item-card__name {
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  top: 15px;
+  background-color: #fff;
+  width: auto;
+  height: 24px;
+  margin: 0;
+  padding: 2px 12px;
+  border-color: transparent;
+  border-radius: 4px;
+  text-align: center;
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  gap: 8px;
+}
+
+.item-card__image {
+  background-color: #e9e9e9;
+  max-width: 226px;
+  max-height: 226px;
+}
