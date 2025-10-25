@@ -4,10 +4,9 @@ function ModalWithForm() {
   return (
     <div className="modal">
       <div className="modal__content">
-        <h2 className="modal__title">New Garment</h2>
-        <button type="button" className="modal__close">
-          CLOSE
-        </button>
+        <h2 className="modal__title">New garment:</h2>
+        <img src="../src/assets/modal-close-image.svg"></img>
+        <button type="button" className="modal__close"></button>
         <form className="modal__form" id="add-garment">
           <label htmlFor="name" className="modal__label">
             Name{" "}

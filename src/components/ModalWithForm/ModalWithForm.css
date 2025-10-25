@@ -11,16 +11,18 @@
 }
 
 .modal__content {
-  background-color: #fff;
-  max-width: 496px;
   position: relative;
-  align-items: space-between;
+  max-width: 496px;
   box-sizing: border-box;
+  background-color: #fff;
   padding: 28px 28px 36px;
 }
 
 .modal__title {
   margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
 }
 
 .modal__close {
@@ -42,4 +44,5 @@
   border: none;
   padding: 0;
   display: flex;
+  flex-direction: column;
 }
