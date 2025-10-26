@@ -28,15 +28,16 @@
   justify-content: space-between;
   align-items: flex-start;
   font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
   top: 221px;
   left: 500px;
+  gap: 8px;
 }
 
 .modal__title {
   margin: 0;
   width: fit-content;
-  font-size: 16px;
-  line-height: 1.25;
 }
 
 .modal__close-button {
@@ -94,12 +95,19 @@
 .modal__radio-input {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  align-items: left;
   gap: 4px;
 }
 
 .modal__submit {
+  background-color: #0000004d;
   width: 124px;
   height: 36px;
+  border-width: 0;
   border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #fff;
   gap: 8px;
 }
