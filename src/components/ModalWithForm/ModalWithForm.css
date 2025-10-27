@@ -11,62 +11,63 @@
   background-color: #0000004d;
 }
 
-.modal__content {
+.modal__container {
   position: relative;
-  width: 496px;
+  max-width: 496px;
+  max-height: 436px;
+  width: 100%;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
   background-color: #fff;
   padding: 28px 28px 36px;
-  font-family: "CabinetGrotesk-Bold";
-  font-weight: 700;
-  font-size: 16px;
   color: #000;
   border-width: 1px;
   border-radius: 20px;
-}
-
-.modal__container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: left;
-  line-height: 1.25;
-  top: 221px;
-  left: 500px;
-  gap: 8px;
+  font-family: "CabinetGrotesk-Bold";
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .modal__title {
+  top: 221px;
+  left: 500px;
   margin: 0;
   width: fit-content;
+  font-size: 16px;
+  line-height: 1.25;
+  margin-bottom: 20px;
 }
 
 .modal__close-button {
   background-image: url("../src/assets/modal-close-image.svg");
+  background-color: white;
   position: absolute;
   top: 20px;
   right: 28px;
   width: 16px;
   height: 16px;
   opacity: 0.3;
+  border: none;
+  transition: 0.3s;
 }
 
 .modal__close-button:hover {
   opacity: 1;
-  transition: 0.3s;
+  cursor: pointer;
 }
 
 .modal__form {
   display: flex;
   flex-direction: column;
-  top: 265px;
+  justify-content: left;
+  width: 100%;
+  font-family: "CabinetGrotesk-Bold";
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .modal_label {
   width: fit-content;
+  top: 341px;
   line-height: 1.25;
 }
 
@@ -82,32 +83,25 @@
   line-height: 1.25;
   color: #000;
   opacity: 0.3;
-  top: 341px;
-}
-
-.modal__container-fieldset {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.modal__legend {
-  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 .modal__radio-buttons {
+  display: flex;
+  flex-direction: column;
   border: none;
   padding: 0;
+  align-items: left;
 }
 
-.modal__radio-input {
-  display: flex;
-  flex-direction: row;
-  align-items: left;
-  gap: 4px;
+.modal__legend {
+  line-height: 1.25;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .modal__submit {
+  margin-top: 20px;
   background-color: #0000004d;
   width: 124px;
   height: 36px;
@@ -115,5 +109,5 @@
   border-radius: 4px;
   line-height: 1.25;
   color: #fff;
-  gap: 8px;
+  margin-bottom: 8px;
 }
