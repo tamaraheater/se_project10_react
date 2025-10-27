@@ -1,34 +1,38 @@
 .modal {
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: #0000004d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .modal__content {
   position: relative;
   width: 496px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
   background-color: #fff;
   padding: 28px 28px 36px;
   font-family: "CabinetGrotesk-Bold";
+  font-weight: 700;
   font-size: 16px;
   color: #000;
+  border-width: 1px;
+  border-radius: 20px;
 }
 
 .modal__container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
-  font-weight: 700;
-  font-size: 16px;
+  align-items: left;
   line-height: 1.25;
   top: 221px;
   left: 500px;
@@ -45,9 +49,8 @@
   position: absolute;
   top: 20px;
   right: 28px;
-  width: 14px;
-  height: 14px;
-  border-width: 2px;
+  width: 16px;
+  height: 16px;
   opacity: 0.3;
 }
 
@@ -64,7 +67,6 @@
 
 .modal_label {
   width: fit-content;
-  font-size: 16px;
   line-height: 1.25;
 }
 
@@ -77,25 +79,30 @@
   border-right: none;
   border-color: black;
   border-bottom-width: 1px;
-  font-size: 16px;
   line-height: 1.25;
   color: #000;
   opacity: 0.3;
   top: 341px;
 }
 
-.modal__radio-buttons {
-  border: none;
-  padding: 0;
+.modal__container-fieldset {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
+.modal__legend {
+  font-size: 16px;
+}
+
+.modal__radio-buttons {
+  border: none;
+  padding: 0;
+}
+
 .modal__radio-input {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: left;
   gap: 4px;
 }
@@ -106,7 +113,6 @@
   height: 36px;
   border-width: 0;
   border-radius: 4px;
-  font-size: 16px;
   line-height: 1.25;
   color: #fff;
   gap: 8px;

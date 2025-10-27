@@ -27,33 +27,37 @@ function ModalWithForm() {
               placeholder="Image URL"
             />
           </label>
-          <fieldset className="modal__radio-buttons">
-            <legend className="modal__legend">Select the weather type:</legend>
-            <label
-              htmlFor="hot"
-              className="modal__label modal__label_type_radio"
-            >
-              {" "}
-              Hot
-              <input id="hot" type="radio" className="modal__radio-input" />
-            </label>
-            <label
-              htmlFor="warm"
-              className="modal__label modal__label_type_radio"
-            >
-              {" "}
-              Warm
-              <input id="warm" type="radio" className="modal__radio-input" />
-            </label>
-            <label
-              htmlFor="cold"
-              className="modal__label modal__label_type_radio"
-            >
-              {" "}
-              Cold
-              <input id="cold" type="radio" className="modal__radio-input" />
-            </label>
-          </fieldset>
+          <div className="modal__container-fieldset">
+            <fieldset className="modal__radio-buttons">
+              <legend className="modal__legend">
+                Select the weather type:
+              </legend>
+              <label
+                htmlFor="hot"
+                className="modal__label modal__label_type_radio"
+              >
+                {" "}
+                Hot
+                <input id="hot" type="radio" className="modal__radio-input" />
+              </label>
+              <label
+                htmlFor="warm"
+                className="modal__label modal__label_type_radio"
+              >
+                {" "}
+                Warm
+                <input id="warm" type="radio" className="modal__radio-input" />
+              </label>
+              <label
+                htmlFor="cold"
+                className="modal__label modal__label_type_radio"
+              >
+                {" "}
+                Cold
+                <input id="cold" type="radio" className="modal__radio-input" />
+              </label>
+            </fieldset>
+          </div>
           <button type="submit" className="modal__submit">
             Add Garment
           </button>
