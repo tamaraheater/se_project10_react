@@ -11,9 +11,9 @@
   border-radius: 12px;
 }
 
-/* .item-card:hover {
+.item-card:hover {
    opacity: 1.0; 
-} */
+} 
 
 .item-card__name {
   position: absolute;
