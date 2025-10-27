@@ -6,7 +6,7 @@ function Header({ handleAddClick }) {
   return (
     <header className="header">
       <img src={logo} alt="Logo" className="header__logo" />
-      <p className="header__date-location">October 21, St. Louis</p>
+      <p className="header__date-location">October 27, St. Louis</p>
       <button 
       onClick={handleAddClick}
       type="button" 

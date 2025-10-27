@@ -9,7 +9,7 @@ function Main({ weatherData }) {
       <WeatherCard />
       <section className="cards">
         <h2 className="cards__title">
-          Today is 75 &deg; F / You may want to wear:
+          Today is 54 &deg; F / You may want to wear:
         </h2>
         <ul className="cards__list">
           {defaultClothingItems

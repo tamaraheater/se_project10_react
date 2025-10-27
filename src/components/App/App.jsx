@@ -6,7 +6,7 @@ import Main from "../Main/Main";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
 function App() {
-  const [weatherData, setWeatherData] = useState({ type: "warm" });
+  const [weatherData, setWeatherData] = useState({ type: "cold" });
   const [activeModal, setActiveModal] = useState("");
   
   const handleAddClick = () => {
