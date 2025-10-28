@@ -9,10 +9,10 @@ import ItemModal from "../ItemModal/ItemModal";
 function App() {
   const [weatherData, setWeatherData] = useState({ type: "cold" });
   const [activeModal, setActiveModal] = useState("preview");
-  const [selectedCard, setSelecteCard] = useState();
+  const [selectedCard, setSelectedCard] = useState({});
 
   const handleCardClick = (card) => {
-    setActiveModal(preview);
+    setActiveModal("preview");
     setSelectedCard(card);
   };
 
@@ -55,8 +55,7 @@ function App() {
           />
         </label>
         <fieldset className="modal__radio-buttons">
-          <legend className="modal__legend">Select the weather type:            
-          </legend>
+          <legend className="modal__legend">Select the weather type:</legend>
           <label htmlFor="hot" className="modal__label modal__label_type_radio">
             {" "}
             <input id="hot" type="radio" className="modal__radio-input" /> Hot
@@ -77,10 +76,11 @@ function App() {
           </label>
         </fieldset>
       </ModalWithForm>
-      <ItemModal 
-      activeModal={activeModal} 
-      card={selectedCard} 
-      onClose={closeActiveModal} />
+      <ItemModal
+        activeModal={activeModal}
+        card={selectedCard}
+        onClose={closeActiveModal}
+      />
     </div>
   );
 }
