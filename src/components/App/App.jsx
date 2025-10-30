@@ -11,9 +11,7 @@ function App() {
   const [activeModal, setActiveModal] = useState("preview");
   const [selectedCard, setSelectedCard] = useState({});
 
-  const handleCardClick = (card) => {
-    setActiveModal("preview");
-    setSelectedCard(card);
+  const handleCardClick = (card) => {setActiveModal("preview");setSelectedCard(card);
   };
 
   const handleAddClick = () => {
@@ -77,7 +75,7 @@ function App() {
         </fieldset>
       </ModalWithForm>
       <ItemModal
-        activeModal={activeModal}
+        activeModal={activeModal} // preview
         card={selectedCard}
         onClose={closeActiveModal}
       />
