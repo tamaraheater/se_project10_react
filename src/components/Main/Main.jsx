@@ -6,10 +6,10 @@ import { defaultClothingItems } from "../../utils/constants";
 function Main({ weatherData, handleCardClick }) {
   return (
     <main>
-      <WeatherCard />
+      <WeatherCard weatherData={weatherData} />
       <section className="cards">
         <h2 className="cards__title">
-          Today is 54 &deg; F / You may want to wear:
+          Today is {weatherData.temp.F} &deg; F / You may want to wear:
         </h2>
         <ul className="cards__list">
           {defaultClothingItems
@@ -18,11 +18,11 @@ function Main({ weatherData, handleCardClick }) {
             })
             .map((item) => {
               return (
-              <ItemCard 
-              key={item._id} 
-              item={item} 
-              onCardClick={handleCardClick} 
-              /> /*Props*/
+                <ItemCard
+                  key={item._id}
+                  item={item}
+                  onCardClick={handleCardClick}
+                /> /*Props*/
               );
             })}
         </ul>
