@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 
 import "./App.css";
-import { coordinates } from "../../utils/constants";
+// import { coordinates, APIkey } from "../../utils/constants";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import ItemModal from "../ItemModal/ItemModal";
+import Footer from "../Footer/Footer";
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 
 function App() {
@@ -28,22 +29,23 @@ function App() {
     setActiveModal("");
   };
 
-  useEffect(() => {
-    getWeather(coordinates)
-      .then((data) => {
-        console.log(data);
-        const filteredWeatherData = filterWeatherData(data);
-        setWeatherData(filteredWeatherData);
-      })
-      .catch(console.error);
-  }, []);
+  // useEffect(() => {
+  //  getWeather(coordinates, APIkey)
+  //     .then((data) => {
+  //       console.log(data);
+  //       const filteredWeatherData = filterWeatherData(data);
+  //       setWeatherData(filteredWeatherData);
+  //     })
+  //     .catch(console.error);
+  // }, []);
 
-  return (
+export default Footer;
     <div className="page">
       <div className="page__content">
         <Header handleAddClick={handleAddClick} weatherData={weatherData} />
         <Main weatherData={weatherData} onCardClick={handleCardClick} />
-      </div>
+        <Footer />
+     </div>
       <ModalWithForm
         title="New garment:"
         buttonText="Add Garment"

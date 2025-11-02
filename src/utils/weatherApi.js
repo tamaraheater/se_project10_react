@@ -1,18 +1,14 @@
-export const getWeather = ({ latitude, longitude }, APIkey) => {
-  const fakeUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${APIkey}&units=imperial`;
-  console.log("%c[Grader] Using URL:", "color: orange;", fakeUrl);
-
-  const realUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m&temperature_unit=fahrenheit`;
-
-  return fetch(realUrl)
-    .then((r) => r.json())
-    .then((data) => ({
-      name: "St. Louis",
-      main: { temp: Math.round(data.current.temperature_2m) },
-      sys: { country: "US" },
-      weather: [{ description: "clear sky" }],
-    }));
-};
+// export const getWeather = ({ latitude, longitude, APIkey }) => {
+//   return fetch(
+//     // `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIkey}`
+//   ).then((res) => {
+//     if (res.ok) {
+//       return res.json();
+//     } else {
+//       return Promise.reject(`Error: ${res.status}`);
+//     }
+//   });
+// };
 
 export const filterWeatherData = (data) => {
   return {

@@ -1,0 +1,26 @@
+.footer__container {
+  display: border-box;
+  max-width: 1358px;
+  border-width: 0;
+  position: absolute;
+  top: 778px;
+  left: 40px;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  font-family: "CabinetGrotesk-Medium" serif, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.footer__author {
+  color: black;
+  line-height: 1.25;
+}
+
+.footer__year {
+  line-height: 1.25;
+  color: black;
+}
