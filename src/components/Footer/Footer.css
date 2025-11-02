@@ -1,8 +1,7 @@
 .footer__container {
   display: border-box;
   max-width: 1358px;
-  border-width: 0;
-  position: absolute;
+  border-width: 0; 
   top: 778px;
   left: 40px;
 }
