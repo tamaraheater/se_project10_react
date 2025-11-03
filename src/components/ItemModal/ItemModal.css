@@ -1,8 +1,27 @@
-.modal__content {
-  max-width: 498px;
+.modal__image {
+  width: 100%;
+  height: auto;
+  max-height: 498px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin: 0;
 }
 
 .modal__foot {
-  background-color: #fff;
-  max-width: 498px;
+  padding: 0 20px 20px;
+  text-align: left;
+  font-family: "CabinetGrotesk-Bold", sans-serif;
+  font-weight: 700;
+}
+
+.modal__caption {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.modal__weather {
+  margin: 0;
+  font-size: 1rem;
+  color: #000;
 }
