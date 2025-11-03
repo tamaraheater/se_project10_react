@@ -25,6 +25,8 @@ return (
       className="weather-card__image"
     />
   </section>
-);
+  );
+}
+
 
 export default WeatherCard;
