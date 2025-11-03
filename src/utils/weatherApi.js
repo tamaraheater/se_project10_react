@@ -2,7 +2,7 @@ import { coordinates, APIkey } from "./constants";
 
 export const getWeather = () => {
   return fetch(
-   `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.latitude}&lon=${coordinates.longitude}&units=imperial&appid=${APIkey}`
+    `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.latitude}&lon=${coordinates.longitude}&units=imperial&appid=${APIkey}`
   ).then((res) => {
     if (res.ok) {
       return res.json();
@@ -13,11 +13,17 @@ export const getWeather = () => {
 };
 
 export const filterWeatherData = (data) => {
-  return {
-    city: data.name,
-    temp: { F: data.main.temp },
-    type: getWeatherType(data.main.temp),
-  };
+  const result = {};
+  result.city = data.name;
+  result.temp = { F: data.main.temp };
+  result.type = getWeatherType(result.temp);
+  result.condition = data.weather[0].main.toLowerCase();
+  result.isDay = isDay(data.sys, Date, now());
+  return result;
+};
+
+const isDay = ({ sunrise, sunset }, now) => {
+  return sunrise * 1000 < now && now < sunset * 1000;
 };
 
 const getWeatherType = (temp) => {
