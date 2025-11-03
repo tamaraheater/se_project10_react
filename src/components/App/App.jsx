@@ -15,7 +15,7 @@ function App() {
     temp: { F: 999 },
     city: "",
   });
-  const [activeModal, setActiveModal] = useState("preview");
+  const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
 
   const handleCardClick = (card) => {
@@ -42,7 +42,7 @@ function App() {
     <div className="page">
       <div className="page__content">
         <Header handleAddClick={handleAddClick} weatherData={weatherData} />
-        <Main weatherData={weatherData} onCardClick={handleCardClick} />
+        <Main weatherData={weatherData} handleCardClick={handleCardClick} />
         <Footer />
       </div>
       <ModalWithForm
@@ -92,7 +92,7 @@ function App() {
         </fieldset>
       </ModalWithForm>
       <ItemModal
-        isOpen={activeModal}
+        activeModal={activeModal}
         card={selectedCard}
         onClose={closeActiveModal}
       />

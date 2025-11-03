@@ -19,9 +19,6 @@
 
 .modal__container {
   position: relative;
-  max-width: 496px;
-  max-height: 436px;
-  width: 100%;
   box-sizing: border-box;
   background-color: #fff;
   padding: 28px 28px 36px;
@@ -32,6 +29,10 @@
   font-weight: 700;
   font-size: 16px;
 }
+
+ /* .modal__container_type_image {
+  background-image: ;
+ } */
 
 .modal__title {
   top: 221px;

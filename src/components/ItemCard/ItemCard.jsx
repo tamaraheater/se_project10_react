@@ -1,7 +1,6 @@
 import "./ItemCard.css";
 
 function ItemCard({ item, onCardClick }) {
-  /*Props needs further study*/
   const handleCardClick = () => {
     onCardClick(item);
   };
