@@ -41,7 +41,7 @@
 }
 
 .modal__close-button {
-  background-image: url("../src/assets/modal-close-image.svg");
+  background-image: url("../../assets/modal-close-image.svg");
   background-color: white;
   position: absolute;
   top: 20px;
@@ -111,7 +111,7 @@
 
 .modal__submit {
   margin-top: 20px;
-  background-image: url("../src/assets/State-Default.pmg");
+  background-image: url("../../assets/State=Default.png");
   background-color: #000;
   width: 124px;
   height: 36px;
