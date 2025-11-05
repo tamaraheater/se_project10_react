@@ -9,7 +9,8 @@ function Main({ weatherData, handleCardClick }) {
       <WeatherCard weatherData={weatherData} />
       <section className="cards">
         <h2 className="cards__title">
-          Today is {weatherData.temp.F} &deg; F / You may want to wear:
+          Today is {weatherData.temp.F.toFixed(0)} &deg; F / You may want to
+          wear:
         </h2>
         <ul className="cards__list">
           {defaultClothingItems
