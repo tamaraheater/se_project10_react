@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 
 import "./App.css";
-import { coordinates, APIkey } from "../../utils/constants";
+import {
+  coordinates,
+  defaultClothingItems,
+  APIkey,
+} from "../../utils/constants";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
@@ -17,6 +21,7 @@ function App() {
   });
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
+  const [clothingItems, setClothingItems] = useState([]);
 
   const handleCardClick = (card) => {
     setActiveModal("preview");
@@ -32,17 +37,23 @@ function App() {
   useEffect(() => {
     getWeather(coordinates, APIkey)
       .then((data) => {
-        console.log(data);
         const filteredWeatherData = filterWeatherData(data);
         setWeatherData(filteredWeatherData);
       })
       .catch(console.error);
   }, []);
+  useEffect(() => {
+    setClothingItems(defaultClothingItems);
+  }, []);
   return (
     <div className="page">
       <div className="page__content">
         <Header handleAddClick={handleAddClick} weatherData={weatherData} />
-        <Main weatherData={weatherData} handleCardClick={handleCardClick} />
+        <Main
+          weatherData={weatherData}
+          handleCardClick={handleCardClick}
+          clothingItems={clothingItems}
+        />
         <Footer />
       </div>
       <ModalWithForm
@@ -56,14 +67,14 @@ function App() {
           <input
             type="text"
             className="modal__input"
-            id="name"
+            id="name" required
             placeholder="Name"
           />
         </label>
         <label htmlFor="imageUrl" className="modal__label">
           Image{" "}
           <input
-            type="url"
+            type="url" required
             className="modal__input"
             id="imageUrl"
             placeholder="Image URL"
@@ -73,21 +84,21 @@ function App() {
           <legend className="modal__legend">Select the weather type:</legend>
           <label htmlFor="hot" className="modal__label modal__label_type_radio">
             {" "}
-            <input id="hot" type="radio" className="modal__radio-input" /> Hot
+            <input id="hot" type="radio" className="modal__radio-input" name= "weatherType" /> Hot
           </label>
           <label
             htmlFor="warm"
             className="modal__label modal__label_type_radio"
           >
             {" "}
-            <input id="warm" type="radio" className="modal__radio-input" /> Warm
+            <input id="warm" type="radio" className="modal__radio-input" name= "weatherType" /> Warm
           </label>
           <label
             htmlFor="cold"
             className="modal__label modal__label_type_radio"
           >
             {" "}
-            <input id="cold" type="radio" className="modal__radio-input" /> Cold
+            <input id="cold" type="radio" className="modal__radio-input" name= "weatherType" /> Cold
           </label>
         </fieldset>
       </ModalWithForm>
