@@ -26,7 +26,7 @@ export const weatherOptions = [
   },
   {
     day: true,
-    condition: "storm",
+    condition: "thunderstorm",
     url: new URL("../assets/day/storm1.svg", import.meta.url).href,
   },
   {
@@ -42,7 +42,7 @@ export const weatherOptions = [
   {
     day: false,
     condition: "fog",
-    url: new URL("../assets/night/fog2.dvg", import.meta.url).href,
+    url: new URL("../assets/night/fog2.svg", import.meta.url).href,
   },
   {
     day: false,
@@ -56,12 +56,12 @@ export const weatherOptions = [
   },
   {
     day: false,
-    condition: "storm",
+    condition: "thunderstorm",
     url: new URL("../assets/night/storm2.svg", import.meta.url).href,
   },
 ];
 
-export const defaultweatherOptions = {
+export const defaultWeatherOptions = {
   day: {
     url: new URL("../assets/day/default1.svg", import.meta.url).href,
   },
@@ -134,7 +134,7 @@ export const defaultClothingItems = [
   {
     _id: 11,
     name: "Shorts",
-    weather: "Hot",
+    weather: "hot",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Shorts.png?etag=d728c496643f610de8d8fea92dd915ba",
   },
   {
