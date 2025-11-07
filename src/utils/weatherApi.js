@@ -1,8 +1,6 @@
-import { coordinates, APIkey } from "./constants";
-
 export const getWeather = async ({ latitude, longitude }, APIkey) => {
   const res = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.latitude}&lon=${coordinates.longitude}&units=imperial&appid=${APIkey}`
+    `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIkey}` //changes to variable key word APIkey causes the API to crash//
   );
   if (res.ok) {
     return res.json();
