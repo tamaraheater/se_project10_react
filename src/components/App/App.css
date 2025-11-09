@@ -3,7 +3,7 @@
   max-width: 1440px;
   width: 100%;
   height: 100%;
-  margin: 0;
+  margin: 0, auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  font-family: "CabinetGrotesk-Bold";
+  font-family: "CabinetGrotesk-Bold", Arial, sans-serif;
   font-weight: 700;
   color: black;
 }

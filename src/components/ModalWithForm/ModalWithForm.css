@@ -10,7 +10,7 @@
   bottom: 0;
   background-color: #0000004d;
   visibility: hidden;
-  transition: 0.6s;
+  transition: visibility 0s 0.3s, opacity 0.3s;
 }
 
 .modal_opened {
@@ -25,7 +25,7 @@
   color: #000;
   border-width: 1px;
   border-radius: 20px;
-  font-family: "CabinetGrotesk-Bold";
+  font-family: "CabinetGrotesk-Bold", Arial, sans-serif;
   font-weight: 700;
   font-size: 16px;
 }

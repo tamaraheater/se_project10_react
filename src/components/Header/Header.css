@@ -48,4 +48,7 @@
 .header__avatar {
   width: 40px;
   border: 1px;
+  border-radius: 50%;
+  height: 40px;
+  object-fit: cover;
 }
