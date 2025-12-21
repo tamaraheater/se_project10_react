@@ -1,3 +1,4 @@
+import "react";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 
 import "./Header.css";
@@ -15,9 +16,7 @@ function Header({ handleAddClick, weatherData }) {
       <p className="header__date-location">
         {currentDate}, {weatherData.city}
       </p>
-
       <ToggleSwitch />
-
       <button
         onClick={handleAddClick}
         type="button"
