@@ -15,7 +15,7 @@ function Header({ handleAddClick, weatherData }) {
       <p className="header__date-location">
         {currentDate}, {weatherData.city}
       </p>
-      <ToggleSwitch/>
+      <ToggleSwitch />
       <button
         onClick={handleAddClick}
         type="button"
