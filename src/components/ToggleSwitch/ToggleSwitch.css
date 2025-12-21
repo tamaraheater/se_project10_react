@@ -19,6 +19,7 @@
   background-color: black;
   width: 28px;
   height: 28px;
+  color: white;
   border-radius: 50%;
   transition: all 0.6s;
 }
@@ -30,19 +31,25 @@
 .toggle-switch__text {
   position: absolute;
   top: 5px;
+  color: #7e7e7e;
   font-family: "CabinetGrotesk-Bold", Arial, sans-serif;
   font-size: 14px;
   line-height: 1;
   text-align: center;
-  color: white;
 }
 
 .toggle-switch__text_F {
   left: 9px;
-  color: #7e7e7e;
 }
 
 .toggle-switch__text_C {
   right: 9px;
-  color: #7e7e7e;
+}
+
+.toggle-switch__checkbox:not(:checked) ~ .toggle-switch__text_F {
+  color: white;
+}
+
+.toggle-switch__checkbox:checked ~ .toggle-switch__text_C {
+  color: white;
 }
