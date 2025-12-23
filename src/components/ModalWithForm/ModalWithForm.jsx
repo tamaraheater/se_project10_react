@@ -3,7 +3,7 @@ import "./ModalWithForm.css";
 const ModalWithForm = ({ 
   title,
   name,
-  buttonText = "Save",
+  buttonText,
   onClose, 
   children,
   isOpen, 
