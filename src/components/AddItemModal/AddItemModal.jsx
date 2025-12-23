@@ -8,6 +8,7 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
     weatherType: "",
   };
   const { values, handleChange } = useForm(defaultValues);
+  function handleSubmit(evt) {}
 
   return (
     <ModalWithForm
@@ -18,23 +19,31 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
       onSubmit={onAddItem}
     >
       <label htmlFor="name" className="modal__label">
-        Name{" "}
+        Name
         <input
           type="text"
-          className="modal__input"
+          name="name"
+          className="modal__input modal__input-type_card-name"
           id="name"
-          required
           placeholder="Name"
+          required
+          minLength="1"
+          maxLength="30"
+          value={values.name}
+          onChange={handleChange}
         />
       </label>
       <label htmlFor="imageUrl" className="modal__label">
-        Image{" "}
+        Image
         <input
           type="url"
-          required
-          className="modal__input"
+          name="link"
+          className="modal__input modal__input_type_url"
           id="imageUrl"
           placeholder="Image URL"
+          required
+          value={values.link}
+          onChange={handleChange}
         />
       </label>
       <fieldset className="modal__radio-buttons">
@@ -46,6 +55,8 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
             type="radio"
             className="modal__radio-input"
             name="weatherType"
+            value="hot"
+            onChange={handleChange}
           />{" "}
           Hot
         </label>
@@ -56,6 +67,8 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
             type="radio"
             className="modal__radio-input"
             name="weatherType"
+            value="warm"
+            onChange={handleChange}
           />{" "}
           Warm
         </label>
@@ -66,6 +79,8 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
             type="radio"
             className="modal__radio-input"
             name="weatherType"
+            value="cold"
+            onChange={handleChange}
           />{" "}
           Cold
         </label>
