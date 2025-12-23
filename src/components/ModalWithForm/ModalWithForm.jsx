@@ -3,10 +3,11 @@ import "./ModalWithForm.css";
 const ModalWithForm = ({ 
   title,
   name,
-  buttonText,
+  buttonText = "Save",
   onClose, 
+  children,
   isOpen, 
-  children,    
+  onSubmit,     
 }) => {
   return (
     <div className={`modal ${isOpen ? "modal_opened" : ""}`}>
@@ -17,9 +18,11 @@ const ModalWithForm = ({
           type="button"
           className="modal__close-button"
         ></button>
-        <form className="modal__form">
+        <form onSubmit={onSubmit} className="modal__form" name={name}>
           {children}
-          <button type="submit" className="modal__submit">
+          <button          
+          type="submit" 
+          className="modal__submit">
             {buttonText}
           </button>
         </form>

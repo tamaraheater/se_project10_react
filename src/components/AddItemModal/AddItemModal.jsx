@@ -8,7 +8,10 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
     weatherType: "",
   };
   const { values, handleChange } = useForm(defaultValues);
-  function handleSubmit(evt) {}
+  function handleSubmit(evt) {
+    evt.preventDefault();
+    onAddItem(values);
+  }
 
   return (
     <ModalWithForm
@@ -16,7 +19,7 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
       name="new-card"
       isOpen={isOpen}
       onClose={onClose}
-      onSubmit={onAddItem}
+      onSubmit={handleSubmit}
     >
       <label htmlFor="name" className="modal__label">
         Name

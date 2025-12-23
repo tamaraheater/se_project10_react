@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react";
 
 import "./App.css";
-import {
-  coordinates,
-  defaultClothingItems,
-  APIkey,
-} from "../../utils/constants";
+import { coordinates, clothingItems, APIkey } from "../../utils/constants";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import AddItemModal from "../AddItemModal/AddItemModal";
@@ -24,7 +20,7 @@ function App() {
   });
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
-  const [clothingItems, setClothingItems] = useState([]);
+  const [clothingItems, setClothingItems] = useState([clothingItems]);
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
 
   const handleToggleSwitchChange = () => {
@@ -37,6 +33,8 @@ function App() {
   };
 
   const handleAddClick = () => setActiveModal("add-garment");
+
+  const onAddItem = (data) => {};
 
   const closeActiveModal = () => {
     setActiveModal("");
@@ -51,7 +49,7 @@ function App() {
       .catch(console.error);
   }, []);
   useEffect(() => {
-    setClothingItems(defaultClothingItems);
+    setClothingItems(clothingItems);
   }, []);
 
   return (
@@ -72,6 +70,7 @@ function App() {
           buttonText="Add Garment"
           onClose={closeActiveModal}
           isOpen={activeModal === "add-garment"}
+          onAddItem={onAddItem}
         />
         <ItemModal
           isOpen={activeModal === "preview"}
