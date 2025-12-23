@@ -1,6 +1,13 @@
 import "./ModalWithForm.css";
 
-function ModalWithForm({ isOpen, children, buttonText, title, onClose }) {
+const ModalWithForm = ({ 
+  title,
+  name,
+  buttonText,
+  onClose, 
+  isOpen, 
+  children,    
+}) => {
   return (
     <div className={`modal ${isOpen ? "modal_opened" : ""}`}>
       <div className="modal__container">
