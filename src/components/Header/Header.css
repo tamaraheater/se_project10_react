@@ -19,6 +19,11 @@
   line-height: 1.2;
 }
 
+.header__toggle-switch{
+ top: 6px;
+ left: 939px;
+}
+
 .header__add-clothes-button {
   width: fit-content;
   height: 24px;
