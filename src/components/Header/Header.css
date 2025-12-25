@@ -16,12 +16,13 @@
   left: 113px;
   margin: 0;
   font-size: 20px;
-  line-height: 1.2;
+  line-height: 1.2;  
 }
 
-.header__toggle-switch{
- top: 6px;
- left: 939px;
+.header__toggle-switch {
+  position: absolute;
+  top: 6px;
+  left: 939px;
 }
 
 .header__add-clothes-button {
