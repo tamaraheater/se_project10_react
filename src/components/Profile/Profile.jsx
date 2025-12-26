@@ -3,11 +3,11 @@ import Sidebar from "../Sidebar/Sidebar";
 import ClothesSection from "../ClothesSection/ClothesSection";
 
 
-export default function Profile() {
+export default function Profile({ clothingItems, onCardClick }) {
     return (
      <section className="profile">
         <Sidebar />
-        <ClothesSection />
+        <ClothesSection onCardClick={onCardClick} clothingItems={clothingItems} />
     </section>
     );
 }
