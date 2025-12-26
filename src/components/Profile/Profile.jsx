@@ -1,10 +1,11 @@
+import "./Profile.css";
 import Sidebar from "../Sidebar/Sidebar";
-import ClothesSection from "..ClothesSection/ClothesSection"
-import "./Profile.css"
+import ClothesSection from "../ClothesSection/ClothesSection";
+
 
 export default function Profile() {
     return (
-     <section>
+     <section className="profile">
         <Sidebar />
         <ClothesSection />
     </section>
