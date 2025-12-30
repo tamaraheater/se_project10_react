@@ -6,6 +6,7 @@ import logo from "../../assets/logo.svg";
 import avatarDefault from "../../assets/avatar.svg";
 
 
+
 function Header({ handleAddClick, weatherData }) {
   const currentDate = new Date().toLocaleString("default", {
     month: "long",
