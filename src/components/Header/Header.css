@@ -82,3 +82,8 @@
   font-size: 20px;
   line-height: 1;
 }
+
+.header__nav-link {
+  color:black;
+  text-decoration:none;
+}

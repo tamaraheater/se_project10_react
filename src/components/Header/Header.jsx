@@ -1,4 +1,5 @@
-import "react";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 
 import "./Header.css";
@@ -32,7 +33,7 @@ function Header({ handleAddClick, weatherData }) {
         >
           + Add Clothes
         </button>
-
+      <NavLink className="header__nav-link" to="/profile">
         <div className="header__profile">
           <div className="header__user-name">{username}</div>
           {avatar ? (
@@ -47,6 +48,7 @@ function Header({ handleAddClick, weatherData }) {
             </span>
           )}
         </div>
+      </NavLink>
     </header>
   );
 }
