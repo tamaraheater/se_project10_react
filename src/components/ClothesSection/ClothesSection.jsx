@@ -8,7 +8,7 @@ export default function ClothesSection({ clothingItems, onCardClick }) {
         <p>Text</p>
         <button>BUTTON</button>
       </div>
-      <ul className="clothes-section__items">
+      <ul className="cards__list">
         {clothingItems.map((item) => {
           return (
             <ItemCard key={item._id} item={item} onCardClick={onCardClick} />

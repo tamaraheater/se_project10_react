@@ -84,14 +84,14 @@ function App() {
                 />
               }
             />
-            <Route 
-              path="/profile" 
+            <Route
+              path="/profile"
               element={
                 <Profile
-                  onCardClick={handleCardClick} 
+                  onCardClick={handleCardClick}
                   clothingItems={clothingItems}
                 />
-               } 
+              }
             />
           </Routes>
           <Footer />
