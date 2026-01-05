@@ -48,7 +48,7 @@ function App() {
       weather: inputValues.weatherType,
     };
     setClothingItems([...clothingItems, inputValues]);
-    closeActiveModal();
+    closeActiveModal(handleReset);
   };
 
   const closeActiveModal = () => {
