@@ -14,6 +14,7 @@ import Profile from "../Profile/Profile";
 import Footer from "../Footer/Footer";
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnitContext";
+import { getItems } from "../../utils/api";
 
 
 function App() {
@@ -61,11 +62,14 @@ function App() {
         setWeatherData(filteredWeatherData);
       })
       .catch(console.error);
-  }, []);
-  useEffect(() => {
-    setClothingItems(defaultClothingItems);
-  }, []);
 
+      getItems()
+        .then((data) => {
+          setClothingItems(data);
+        })
+        .catch(console.error);
+  }, []);
+  
   return (
     <CurrentTemperatureUnitContext.Provider
       value={{ currentTemperatureUnit, handleToggleSwitchChange }}

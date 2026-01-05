@@ -1,7 +1,7 @@
 export const getWeather = async ({ latitude, longitude }, APIkey) => {
   const res = await fetch(
     `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIkey}`
-  ); //changes to keyword APIkey causes api to crash//
+  );
   if (res.ok) {
     return res.json();
   } else {
