@@ -3,8 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
 import {
-  coordinates,
-  defaultClothingItems,
+  coordinates,  
   APIkey,
 } from "../../utils/constants";
 import Header from "../Header/Header";
@@ -16,6 +15,7 @@ import Footer from "../Footer/Footer";
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnitContext";
 
+
 function App() {
   const [weatherData, setWeatherData] = useState({
     type: "",
@@ -26,7 +26,7 @@ function App() {
   });
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
-  const [clothingItems, setClothingItems] = useState([defaultClothingItems]);
+  const [clothingItems, setClothingItems] = useState([]);
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
 
   const handleToggleSwitchChange = () => {
