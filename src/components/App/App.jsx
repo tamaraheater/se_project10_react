@@ -46,7 +46,7 @@ function App() {
 
     addItem(newCardData)
       .then((data) => {
-        setClothingItems([data, ...clothingItems]); 
+        setClothingItems([data, ...clothingItems]);
         closeActiveModal();
       })
       .catch(console.error);
@@ -60,7 +60,7 @@ function App() {
 
   // Actually deletes the item
   const confirmDeleteItem = () => {
-    removeItem(selectedCard._id) 
+    removeItem(selectedCard._id)
       .then(() => {
         setClothingItems((prevItems) =>
           prevItems.filter((item) => item._id !== selectedCard._id)
@@ -124,6 +124,7 @@ function App() {
           <Footer />
         </div>
 
+        {/* All modals go here — inside page__content and Provider */}
         <AddItemModal
           buttonText="Add Garment"
           onClose={closeActiveModal}
@@ -138,6 +139,7 @@ function App() {
           onDelete={handleDeleteItem}
         />
 
+        {/* Delete confirmation modal */}
         {activeModal === "delete" && (
           <div className="modal modal_opened">
             <div className="modal__container modal__container_type_confirm">
@@ -149,39 +151,32 @@ function App() {
 
               <div className="modal__confirm-content">
                 <p className="modal__confirm-text">
-                  Are you sure you want to delete this item?<br />
-                  This action cannot be undone.
+                  Are you sure you want to delete this item?
+                  <br />
+                  This action is irreversible.
                 </p>
-
-                <img
-                  src={selectedCard.imageUrl}
-                  alt={selectedCard.name}
-                  className="modal__confirm-image"
-                />
-
-                <h3 className="modal__confirm-name">{selectedCard.name}</h3>
 
                 <div className="modal__confirm-buttons">
                   <button
-                    className="modal__confirm-cancel"
+                    className="modal__confirm-delete-button"
+                    onClick={confirmDeleteItem}
+                  >
+                    Yes, delete item
+                  </button>
+                  <button
+                    className="modal__confirm-cancel-button"
                     onClick={closeActiveModal}
                   >
                     Cancel
-                  </button>
-                  <button
-                    className="modal__confirm-delete"
-                    onClick={confirmDeleteItem}
-                  >
-                    Yes, Delete
                   </button>
                 </div>
               </div>
             </div>
           </div>
         )}
-      </div>
+      </div>{" "}
+      {/* ← Closes .page */}
     </CurrentTemperatureUnitContext.Provider>
   );
 }
-
 export default App;

@@ -159,3 +159,34 @@
   cursor: not-allowed;
   transform: none;
 }
+
+.modal__confirm-buttons {
+  display: flex;
+  flex-direction: column; /* Stacked on mobile, but we can change later */
+  gap: 20px; /* Clean space between buttons */
+  width: 100%;
+  max-width: 367px;
+  margin-top: 20px;
+}
+
+.modal__confirm-delete-button {
+  background-color: transparent;
+  color: #ff4d00;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 20px;
+  border: none;
+  padding: 12px;
+  letter-spacing: 0;
+}
+
+.modal__confirm-cancel-button {
+  background-color: transparent;
+  color: #000;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 20px;
+  border: none;
+  padding: 12px;
+  letter-spacing: 0;
+}

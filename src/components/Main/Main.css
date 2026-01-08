@@ -14,14 +14,13 @@
   text-align: left;
   margin: 0;
   padding-bottom: 40px;
+  flex-grow: 1;
 }
 
 .cards__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, 325px);
-  grid-template-rows: repeat(auto-fit, 323px);
+  grid-template-rows: repeat(auto-fit, 328px);
   grid-gap: 20px;
   padding: 0;
-  gap: 21px;
-  margin-bottom: 100px;
 }
