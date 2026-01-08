@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   max-width: 1360px;
+  padding-top: 40px;
 }
 
 .cards__title {
@@ -11,17 +12,16 @@
   font-size: 20px;
   line-height: 1;
   text-align: left;
+  margin: 0;
+  padding-bottom: 40px;
 }
 
 .cards__list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 325px);
+  grid-template-rows: repeat(auto-fit, 323px);
+  grid-gap: 20px;
   padding: 0;
-  list-style-type: none;
   gap: 21px;
   margin-bottom: 100px;
 }
-

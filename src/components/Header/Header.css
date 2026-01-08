@@ -1,8 +1,9 @@
 .header {
   display: flex;
-  margin-bottom: 16px;
   position: relative;
   flex-direction: row;
+  padding: 0;
+  margin: 0;
 }
 
 .header__logo-container {

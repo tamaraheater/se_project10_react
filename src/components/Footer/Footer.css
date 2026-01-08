@@ -1,7 +1,7 @@
 .footer__container {
   box-sizing: border-box;
   max-width: 1358px;
-  border-width: 0;
+  border: none;
   top: 778px;
   left: 40px;
   padding: 0;
@@ -12,16 +12,26 @@
   display: flex;
   justify-content: space-between;
   font-family: "CabinetGrotesk-Medium", Arial, sans-serif;
-  font-size: 16px;
   font-weight: 500;
-}
+  font-style: normal;
+  vertical-align: bottom;
+  margin: 0;
+ }
 
 .footer__author {
+  font-size: 16px;
   color: black;
   line-height: 1.25;
+  min-width: 204px;
+  width:fit-content;
+  margin: 0;
+  text-decoration: none;
 }
 
 .footer__year {
+  font-size: 16px;
   line-height: 1.25;
   color: black;
+  margin: 0;
+  text-decoration: none;
 }

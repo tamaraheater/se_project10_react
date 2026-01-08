@@ -2,10 +2,7 @@ import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
-import {
-  coordinates,  
-  APIkey,
-} from "../../utils/constants";
+import { coordinates, APIkey } from "../../utils/constants";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import AddItemModal from "../AddItemModal/AddItemModal";
@@ -14,8 +11,7 @@ import Profile from "../Profile/Profile";
 import Footer from "../Footer/Footer";
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnitContext";
-import { getItems } from "../../utils/api";
-
+import { getItems, addItem, removeItem } from "../../utils/api";
 
 function App() {
   const [weatherData, setWeatherData] = useState({
@@ -44,15 +40,42 @@ function App() {
   const onAddItem = (inputValues) => {
     const newCardData = {
       name: inputValues.name,
-      link: inputValues.link,
+      imageUrl: inputValues.imageUrl,
       weather: inputValues.weatherType,
     };
-    setClothingItems([...clothingItems, inputValues]);
-    closeActiveModal(handleReset);
+
+    addItem(newCardData)
+      .then((data) => {
+        setClothingItems([data, ...clothingItems]); 
+        closeActiveModal();
+      })
+      .catch(console.error);
+  };
+
+  // Opens confirmation modal
+  const handleDeleteItem = (card) => {
+    setSelectedCard(card);
+    setActiveModal("delete");
+  };
+
+  // Actually deletes the item
+  const confirmDeleteItem = () => {
+    removeItem(selectedCard._id) 
+      .then(() => {
+        setClothingItems((prevItems) =>
+          prevItems.filter((item) => item._id !== selectedCard._id)
+        );
+        closeActiveModal();
+      })
+      .catch((error) => {
+        console.error("Failed to delete item:", error);
+        alert("Failed to delete item. Please try again.");
+      });
   };
 
   const closeActiveModal = () => {
     setActiveModal("");
+    setSelectedCard({});
   };
 
   useEffect(() => {
@@ -63,13 +86,13 @@ function App() {
       })
       .catch(console.error);
 
-      getItems()
-        .then((data) => {
-          setClothingItems(data);
-        })
-        .catch(console.error);
+    getItems()
+      .then((data) => {
+        setClothingItems(data);
+      })
+      .catch(console.error);
   }, []);
-  
+
   return (
     <CurrentTemperatureUnitContext.Provider
       value={{ currentTemperatureUnit, handleToggleSwitchChange }}
@@ -100,17 +123,62 @@ function App() {
           </Routes>
           <Footer />
         </div>
+
         <AddItemModal
           buttonText="Add Garment"
           onClose={closeActiveModal}
           isOpen={activeModal === "add-garment"}
           onAddItem={onAddItem}
         />
+
         <ItemModal
           isOpen={activeModal === "preview"}
           card={selectedCard}
           onClose={closeActiveModal}
+          onDelete={handleDeleteItem}
         />
+
+        {activeModal === "delete" && (
+          <div className="modal modal_opened">
+            <div className="modal__container modal__container_type_confirm">
+              <button
+                onClick={closeActiveModal}
+                type="button"
+                className="modal__close-button"
+              />
+
+              <div className="modal__confirm-content">
+                <p className="modal__confirm-text">
+                  Are you sure you want to delete this item?<br />
+                  This action cannot be undone.
+                </p>
+
+                <img
+                  src={selectedCard.imageUrl}
+                  alt={selectedCard.name}
+                  className="modal__confirm-image"
+                />
+
+                <h3 className="modal__confirm-name">{selectedCard.name}</h3>
+
+                <div className="modal__confirm-buttons">
+                  <button
+                    className="modal__confirm-cancel"
+                    onClick={closeActiveModal}
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    className="modal__confirm-delete"
+                    onClick={confirmDeleteItem}
+                  >
+                    Yes, Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </CurrentTemperatureUnitContext.Provider>
   );
