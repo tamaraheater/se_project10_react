@@ -9,18 +9,17 @@ export default function Sidebar() {
     <aside className="sidebar">
       <div className="sidebar__profile">
         <div className="sidebar__user-name">{username}</div>
-        {avatar ? (
-          <img
-            className="sidebar__avatar"
-            src={avatar || avatarDefault}
-            alt="user avatar"
-          />
+          {avatar ? (
+            <img
+              className="sidebar__avatar"
+              src={avatar || avatarDefault}
+              alt="user avatar"/>
         ) : (
           <span className="sidebar__avatar sidebar__avatar_none">
             {username?.toUpperCase().char(0) || ""}
-          </span>
-        )}
-      </div>
+          </span>)}
+        </div> 
     </aside>
-  );
-}
+    );
+  }
+

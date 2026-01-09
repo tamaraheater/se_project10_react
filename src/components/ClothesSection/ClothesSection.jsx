@@ -14,10 +14,9 @@ export default function ClothesSection({
           className="clothes-section__add-button"
           onClick={handleAddClick}
         >
-          Add New Items
+          + Add New Items
         </button>
       </div>
-
       <div className="clothes-section__cards">
         {clothingItems.map((item) => (
           <ItemCard key={item._id} item={item} onCardClick={onCardClick} />

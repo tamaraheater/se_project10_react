@@ -7,6 +7,8 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 19px;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .card__name {
@@ -30,6 +32,9 @@
 
 .card__image {
   background-color: #e9e9e9;
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  content: contain;
   cursor: pointer;
+  overflow: hidden;
 }
