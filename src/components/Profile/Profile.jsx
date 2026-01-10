@@ -3,14 +3,15 @@ import Sidebar from "../Sidebar/Sidebar";
 import ClothesSection from "../ClothesSection/ClothesSection";
 
 
-export default function Profile({ clothingItems, onCardClick, onAddClick }) {
+export default function Profile({ clothingItems, onCardClick, onAddClick, handleAddClick }) {
     return (
      <section className="profile">
         <Sidebar />
         <ClothesSection 
           onCardClick={onCardClick}
           clothingItems={clothingItems}  
-          onAddClick={onAddClick} 
+          onAddClick={onAddClick}
+          handleAddClick={handleAddClick} 
         />
     </section>
     );

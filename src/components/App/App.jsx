@@ -35,7 +35,10 @@ function App() {
     setSelectedCard(card);
   };
 
-  const handleAddClick = () => setActiveModal("add-garment");
+  const handleAddClick = () => {
+    console.log("Add button was clicked!");
+    setActiveModal("add-garment");
+  };
 
   const onAddItem = (inputValues) => {
     const newCardData = {
@@ -52,13 +55,11 @@ function App() {
       .catch(console.error);
   };
 
-  // Opens confirmation modal
   const handleDeleteItem = (card) => {
     setSelectedCard(card);
     setActiveModal("delete");
   };
 
-  // Actually deletes the item
   const confirmDeleteItem = () => {
     removeItem(selectedCard._id)
       .then(() => {
@@ -108,6 +109,7 @@ function App() {
                   weatherData={weatherData}
                   handleCardClick={handleCardClick}
                   clothingItems={clothingItems}
+                  handleAddClick={handleAddClick}
                 />
               }
             />
@@ -117,7 +119,8 @@ function App() {
                 <Profile
                   onCardClick={handleCardClick}
                   clothingItems={clothingItems}
-                />
+                  handleAddClick={handleAddClick}
+                />                
               }
             />
           </Routes>
@@ -171,4 +174,5 @@ function App() {
     </CurrentTemperatureUnitContext.Provider>
   );
 }
+
 export default App;
