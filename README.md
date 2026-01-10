@@ -1,13 +1,14 @@
 # WTWR SE_Project10_React (se_project10_react) is A Weather-related Inventory – React-Based Clothing Management System
 
-WTWR Inventory Modal Preview – Professional Item Management
-HOME SCREEN
+# WTWR Inventory Modal Preview – Professional Item Management
+
+# HOME SCREEN
 ![App Home Screen](https://github.com/user-attachments/assets/31d8e345-01fd-4e4e-86a5-7aaf0b290849)
 
-PROFILE-COMPLETE INVENTORY
+# PROFILE-COMPLETE INVENTORY
 ![app profile, unfiltered wardrobe inventory ](https://github.com/user-attachments/assets/aff8074b-d9e6-4a7e-95b0-47966d1bb20d)
 
-ADD ITEM MODAL
+# ADD ITEM MODAL
 ![Modal Form](https://github.com/user-attachments/assets/13531448-77f4-4ef2-a97b-a76d8a42abd8)
 
 **A robust React application demonstrating clean modal-based item preview, safe deletion, and weather-tagged inventory management. Built as a capstone project, but designed with real business use cases in mind.
@@ -37,10 +38,10 @@ This project proves you can build reliable front-end foundations for enterprise-
 - **Responsive Inventory Grid**  
   Cards adapt to any screen size — essential for warehouse tablets, manager dashboards, or mobile stock checks.
   
-  PREVIEW ITEM-DELETE ITEM
+  # PREVIEW ITEM-DELETE ITEM
   ![Preview-delete modal](https://github.com/user-attachments/assets/c26d9ea8-6301-43ce-b95b-e6236c24b7d8)
 
-   REQUIRED DELETE CONFIRMATION
+   # REQUIRED DELETE CONFIRMATION
   ![delete-confirm modal](https://github.com/user-attachments/assets/2a330baf-ce80-40b7-af9c-d1b96c8d51b6)
 
 ### Tech Stack (Production-Ready Patterns)
