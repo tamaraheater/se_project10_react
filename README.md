@@ -2,14 +2,13 @@
 
 WTWR Inventory Modal Preview – Professional Item Management
 
-**![App Home Screen](https://github.com/user-attachments/assets/31d8e345-01fd-4e4e-86a5-7aaf0b290849)
+![App Home Screen](https://github.com/user-attachments/assets/31d8e345-01fd-4e4e-86a5-7aaf0b290849)
 
 ![app profile, unfiltered wardrobe inventory ](https://github.com/user-attachments/assets/aff8074b-d9e6-4a7e-95b0-47966d1bb20d)
 
 
 
 **A robust React application demonstrating clean modal-based item preview, safe deletion, and weather-tagged inventory management. Built as a capstone project, but designed with real business use cases in mind.
-
 
 While many see this wardrobe app as casual fun, the core patterns here provide real-world solutions for many business applications for companies large and small with:
 — intuitive modals for item inspection, controlled deletion with clear affordances, and contextual tagging (e.g., weather/environment) 
@@ -24,7 +23,6 @@ In real-world operations:
 
 This project proves you can build reliable front-end foundations for enterprise-level inventory tools.
 
-### Key Features (Business-Focused)
 - **Modal-Driven Item Management**  
   Click any inventory card → opens a focused preview modal with large image, name, contextual tag (weather), and prominent **Delete Item** action that includes required confirmation, aligned for easy access without clutter.
 
@@ -37,9 +35,15 @@ This project proves you can build reliable front-end foundations for enterprise-
 - **Responsive Inventory Grid**  
   Cards adapt to any screen size — essential for warehouse tablets, manager dashboards, or mobile stock checks.
 
+  ![Preview-delete modal](https://github.com/user-attachments/assets/c26d9ea8-6301-43ce-b95b-e6236c24b7d8)
+
+  
+  ![delete-confirm modal](https://github.com/user-attachments/assets/2a330baf-ce80-40b7-af9c-d1b96c8d51b6)
+
 ### Tech Stack (Production-Ready Patterns)
 - React (Hooks, State Management, Functional Components)
 - React Router (for seamless modal navigation)
+
 - Custom CSS (Flexbox mastery for reliable layouts)
 - API-Ready Structure (inventory data fetched/mocked — easy to swap for real backend)
 
