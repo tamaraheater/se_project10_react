@@ -1,14 +1,12 @@
 # WTWR SE_Project10_React (se_project10_react) is A Weather-related Inventory – React-Based Clothing Management System
 
-![WTWR Inventory Modal Preview – Professional Item Management](https://via.placeholder.com/1200x600.png?text=Modal+Preview+with+Delete+Action)  
-![App Home Screen](https://github.com/user-attachments/assets/55279130-f8b1-4dca-9ed6-a6!
-[app profile, unfiltered wardrobe inventory ](https://github.com/user-attachments/assets/4af0f492-e22b-497a-bff5-71b3f1a53737)
-fe73c7e140)!
-[Preview-delete modal](https://github.com/user-attachments/assets/0ff67841-2670-4f6f-93fd-5ae01dfa6573)
+WTWR Inventory Modal Preview – Professional Item Management
+**![App Home Screen](https://github.com/user-attachments/assets/31d8e345-01fd-4e4e-86a5-7aaf0b290849)
+![app profile, unfiltered wardrobe inventory ](https://github.com/user-attachments/assets/aff8074b-d9e6-4a7e-95b0-47966d1bb20d)
 
-![delete-confirm modal](https://github.com/user-attachments/assets/2409c9e1-3fc2-4fb5-8722-87dc79b0c0ba)
 
-**A robust React application demonstrating clean modal-based item preview, safe deletion, and weather-tagged inventory management. Built as a capstone project, but designed with real business use cases in mind.**
+**A robust React application demonstrating clean modal-based item preview, safe deletion, and weather-tagged inventory management. Built as a capstone project, but designed with real business use cases in mind.
+
 
 While many see this wardrobe app as casual fun, the core patterns here provide real-world solutions for many business applications for companies large and small with:
 — intuitive modals for item inspection, controlled deletion with clear affordances, and contextual tagging (e.g., weather/environment) 
