@@ -1,4 +1,4 @@
-SE_Project10_React (se_project10_react) # WTWR is A Weather-related Inventory – React-Based Clothing Management System
+# WTWR SE_Project10_React (se_project10_react) is A Weather-related Inventory – React-Based Clothing Management System
 
 ![WTWR Inventory Modal Preview – Professional Item Management](https://via.placeholder.com/1200x600.png?text=Modal+Preview+with+Delete+Action)  
 *(Replace with your actual modal screenshot showing name + Delete Item aligned right + weather below)*

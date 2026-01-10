@@ -32,9 +32,9 @@
   font-family: "CabinetGrotesk-Bold", Arial, sans-serif;
   font-weight: 700;
   font-size: 16px;
-  width: 496px;
+  width: 500px;
   max-width: 100%;
-  padding: 20px;    
+  padding: 20px;     
 }
 
 .modal__title {
@@ -163,8 +163,7 @@
 
 .modal__container_type_confirm {
   background: #ffffff;
-  border-radius: 16px;
-  padding: 32px 24px;
+  border-radius: 16px;  
   width: 670px;
   max-width: 100%;
 }
