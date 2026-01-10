@@ -1,6 +1,6 @@
 # WTWR SE_Project10_React (se_project10_react) is A Weather-related Inventory – React-Based Clothing Management System
 
-## WTWR Inventory Modal Preview – Professional Item Management
+## Inventory Modal Preview – Professional Item Management
 
 ### HOME SCREEN
 ![App Home Screen](https://github.com/user-attachments/assets/31d8e345-01fd-4e4e-86a5-7aaf0b290849)
@@ -11,7 +11,7 @@
 ### ADD ITEM MODAL
 ![Modal Form](https://github.com/user-attachments/assets/13531448-77f4-4ef2-a97b-a76d8a42abd8)
 
-**A robust React application demonstrating clean modal-based item preview, safe deletion, and weather-tagged inventory management. Built as a capstone project, but designed with real business use cases in mind.
+A robust React application demonstrating clean modal-based item preview, safe deletion, and weather-tagged inventory management. Built as a capstone project, but designed with real business use cases in mind.
 
 While many see this wardrobe app as casual fun, the core patterns here provide real-world solutions for many business applications for companies large and small with:
 — intuitive modals for item inspection, controlled deletion with clear affordances, and contextual tagging (e.g., weather/environment) 
@@ -27,7 +27,7 @@ In real-world operations:
 This project proves you can build reliable front-end foundations for enterprise-level inventory tools.
 
 - **Modal-Driven Item Management**  
-  Click any inventory card → opens a focused preview modal with large image, name, contextual tag (weather), and prominent **Delete Item** action that includes required confirmation, aligned for easy access without clutter.
+  Click any inventory card → opens a focused preview modal with large image, name, contextual tag (weather), and prominent **Delete Item** action that includes required   confirmation, aligned for easy access without clutter.
 
 - **Safe & Intuitive Deletion**  
   Delete button always positioned on the same line as the item name for maximum visibility and minimum risk — battle-tested through extensive CSS refinement.
