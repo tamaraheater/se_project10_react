@@ -2,7 +2,7 @@
 
 # WTWR Inventory Modal Preview – Professional Item Management
 
-# HOME SCREEN
+### HOME SCREEN
 ![App Home Screen](https://github.com/user-attachments/assets/31d8e345-01fd-4e4e-86a5-7aaf0b290849)
 
 # PROFILE-COMPLETE INVENTORY
