@@ -1,8 +1,18 @@
-# WTWR SE_Project10_React (se_project10_react) is A Weather-related Inventory – React-Based Clothing Management System
+# WTWR SE_Project10_React (se_project10_react)
+
+### -A Weather-related Inventory – React-Based Clothing Management System
 
 ## Inventory Modal Preview – Professional Item Management
 
 ### HOME SCREEN
+
+![App Home Screen](https://github.com/user-attachments/assets/31d8e345-01fd-4e4e-86a5-7aaf0b290849)
+
+### PROFILE-COMPLETE INVENTORY
+
+![app profile, unfiltered wardrobe inventory ](https://github.com/user-attachments/assets/aff8074b-d9e6-4a7e-95b0-47966d1bb20d)
+
+### ADD ITEM MODAL
 
 ![App Home Screen](https://github.com/user-attachments/assets/31d8e345-01fd-4e4e-86a5-7aaf0b290849)
 
@@ -63,17 +73,17 @@ This project uses REACT technology which is a hybrid-combination of HTML and Jav
 
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules. Currently, two official plugins are available:
+React uses two plugins
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 ### Business Applications & Transferable Value
 
-Retail & Fashion E-commerce: Seasonal item recommendations, quick stock adjustments
-Asset Management: Track equipment with condition tags (e.g., "cold storage only")
-Supply Chain: Safe delete workflows for obsolete inventory
-Scalability: Modular code ready for API integration (real backend coming soon)
+-Retail & Fashion E-commerce: Seasonal item recommendations, quick stock adjustments
+-Asset Management: Track equipment with condition tags (e.g., "cold storage only")
+-Supply Chain: Safe delete workflows for obsolete inventory
+-Scalability: Modular code ready for API integration (real backend coming soon)
 
 What I have Learned in Mastering modal UX and inventory state taught me how small UI decisions (button placement, spacing, affordances) directly impact operational efficiency and error reduction in business-critical apps, with a solid foundation thanks to TripleTen.
 
