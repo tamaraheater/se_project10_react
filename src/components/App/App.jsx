@@ -36,7 +36,6 @@ function App() {
   };
 
   const handleAddClick = () => {
-    console.log("Add button was clicked!");
     setActiveModal("add-garment");
   };
 
@@ -120,7 +119,7 @@ function App() {
                   onCardClick={handleCardClick}
                   clothingItems={clothingItems}
                   handleAddClick={handleAddClick}
-                />                
+                />
               }
             />
           </Routes>

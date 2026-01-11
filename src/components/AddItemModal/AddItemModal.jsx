@@ -7,11 +7,13 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
     imageUrl: "",
     weatherType: "",
   };
-  const { values, handleChange } = useForm(defaultValues);
-  function handleSubmit(evt) {
-    evt.preventDefault();
-    onAddItem(values);
-  }
+  const { values, handleChange, handleReset } = useForm(defaultValues);
+
+  useEffect(() => {
+    if (isOpen) {
+      handleReset();
+    }
+  }, [isOpen, handleReset]);
 
   return (
     <ModalWithForm

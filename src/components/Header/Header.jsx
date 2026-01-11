@@ -38,17 +38,17 @@ function Header({ handleAddClick, weatherData }) {
           <div className="header__user-name">{username}</div>
         </NavLink>
       </div>
-            {avatar ? (
-              <img
-                className="header__avatar"
-                src={avatar || avatarDefault}
-                alt="user avatar"
-              />
-            ) : (
-              <span className="header__avatar sidebar__avatar_none">
-                {username?.toUpperCase().char(0) || ""}
-              </span>
-            )}
+      {avatar ? (
+        <img
+          className="header__avatar"
+          src={avatar || avatarDefault}
+          alt="user avatar"
+        />
+      ) : (
+        <span className="header__avatar sidebar__avatar_none">
+          {username?.[0]?.toUpperCase() || ""}
+        </span>
+      )}
     </header>
   );
 }

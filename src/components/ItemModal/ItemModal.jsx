@@ -9,7 +9,7 @@ function ItemModal({ isOpen, onClose, card, onDelete }) {
           type="button"
           className="modal__close-button"
         ></button>
-        <img src={card.imageUrl} alt="Preview Image" className="modal__image" />
+        <img src={card.imageUrl} alt="Preview of Item Image" className="modal__image" />
         <div className="modal__image-footer">
           <h3 className="modal__caption">{card.name}</h3>
           <button
