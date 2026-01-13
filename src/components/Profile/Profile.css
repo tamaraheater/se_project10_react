@@ -7,17 +7,3 @@
   box-sizing: border-box;
 }
 
-.mobile__header {
-  display: none;
-}
-
-@media (max-width: 767px) {
-  .mobile__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background: white;
-    border-bottom: 1px solid #eee;
-  }
-}

@@ -38,15 +38,3 @@
   cursor: pointer;
   overflow: hidden;
 }
-
-/* @media (min-width: 768px) {
-   .card {  
-    font-size: 0.95rem; 
-  }
-
-   .card__image {
-    height: 180px;
-    object-fit: cover;
-  }
-} */
-
