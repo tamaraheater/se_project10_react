@@ -4,6 +4,9 @@
 
 ## Inventory Modal Preview – Professional Item Management
 
+##Video Tour of WTWR
+![Link to video](https://www.loom.com/share/f8888b4644c145529cbeb14b12ccae6e)
+
 ### HOME SCREEN
 
 ![App Home Screen](https://github.com/user-attachments/assets/31d8e345-01fd-4e4e-86a5-7aaf0b290849)
@@ -14,15 +17,7 @@
 
 ### ADD ITEM MODAL
 
-![App Home Screen](https://github.com/user-attachments/assets/31d8e345-01fd-4e4e-86a5-7aaf0b290849)
-
-### PROFILE-COMPLETE INVENTORY
-
-![app profile, unfiltered wardrobe inventory ](https://github.com/user-attachments/assets/aff8074b-d9e6-4a7e-95b0-47966d1bb20d)
-
-### ADD ITEM MODAL
-
-![Modal Form](https://github.com/user-attachments/assets/13531448-77f4-4ef2-a97b-a76d8a42abd8)
+![Add New Items](https://github.com/user-attachments/assets/31d8e345-01fd-4e4e-86a5-7aaf0b290849)
 
 A robust React application demonstrating clean modal-based item preview, safe deletion, and weather-tagged inventory management. Built as a capstone project, but designed with real business use cases in mind.
 
@@ -65,15 +60,14 @@ This project proves you can build reliable front-end foundations for enterprise-
 
 - React (Hooks, State Management, Functional Components)
 - React Router (for seamless modal navigation)
-
 - Custom CSS (Flexbox mastery for reliable layouts)
 - API-Ready Structure (inventory data fetched/mocked — easy to swap for real backend)
 
-This project uses REACT technology which is a hybrid-combination of HTML and JavaScript and CSS using a Vite environment through NPM. It connects API weather server delivering current weather for "what to wear" for each day according to weather conditions. This project will be continually expanded for 3 more Sprints, with backend management including verification and validation tools in an additional Sprint. This project can be viewed at [(https://tamaraheater.github.io/se_project10_react)]
+This project uses REACT technology which is a hybrid-combination of HTML, JavaScript and CSS using a Vite environment through NPM. It connects API weather server delivering current weather for "what to wear" for each day according to weather conditions. This project will be continually expanded for 3 more Sprints, with backend management including verification and validation tools in additional Sprints. This project can be viewed at [(https://tamaraheater.github.io/se_project10_react)]
 
 # React + Vite
 
-React uses two plugins
+This React Project uses these two plugins:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
@@ -87,4 +81,4 @@ React uses two plugins
 
 What I have Learned in Mastering modal UX and inventory state taught me how small UI decisions (button placement, spacing, affordances) directly impact operational efficiency and error reduction in business-critical apps, with a solid foundation thanks to TripleTen.
 
-Built with precision by Tamara Heater – Turning front-end skills into business-ready solutions. Please Star this project and follow me on GitHub if you value clean UX in inventory tools — or if you're hiring for React devs who think enterprise-first. TripleTen is a "deep well" resource for your talent needs.
+Built with precision by Tamara Heater – Turning front-end skills into business-ready solutions. Please Star this project and follow me on GitHub if you value clean UX in inventory tools — or if you're hiring for React devs who think enterprise-first. ##TripleTen is a "deep well" resource for your talent needs.

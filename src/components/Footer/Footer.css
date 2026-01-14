@@ -16,16 +16,15 @@
   font-style: normal;
   vertical-align: bottom;
   margin: 0;
- }
+}
 
 .footer__author {
   font-size: 16px;
   color: black;
   line-height: 1.25;
   min-width: 204px;
-  width:fit-content;
+  width: fit-content;
   margin: 0;
-  text-decoration: none;
 }
 
 .footer__year {
@@ -33,5 +32,4 @@
   line-height: 1.25;
   color: black;
   margin: 0;
-  text-decoration: none;
 }
