@@ -21,7 +21,7 @@ function ConfirmDeleteModal({ isOpen, onClose, onConfirm, cardName }) {
             onClick={onConfirm}
             type="button"
           >
-            Yes, delete item
+            Yes, delete this item
           </button>
 
           <button
