@@ -157,7 +157,7 @@ function App() {
                   className="modal__confirm-delete-button"
                   onClick={confirmDeleteItem}
                 >
-                  Yes, delete item!
+                  Yes, delete this item!
                 </button>
                 <button
                   className="modal__confirm-cancel-button"
