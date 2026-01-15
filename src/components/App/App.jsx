@@ -55,29 +55,30 @@ function App() {
       .catch(console.error);
   };
 
-  const handleDeleteItem = (card) => {
-    setSelectedCard(card);
-    setActiveModal("delete");
-  };
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [cardToDelete, setCardToDelete] = useState(null);
 
+  // New handler
+  const handleDeleteClick = (card) => {
+    setCardToDelete(card);
+    setIsDeleteModalOpen(true);
+  };
   const confirmDeleteItem = () => {
-    removeItem(selectedCard._id)
+    if (!cardToDelete) return;
+
+    removeItem(cardToDelete._id)
       .then(() => {
         setClothingItems((prevItems) =>
-          prevItems.filter((item) => item._id !== selectedCard._id)
+          prevItems.filter((item) => item._id !== cardToDelete._id)
         );
+        setIsDeleteModalOpen(false);
+        setCardToDelete(null);
         closeActiveModal();
       })
       .catch((error) => {
         console.error("Failed to delete item:", error);
       });
   };
-
-  const closeActiveModal = () => {
-    setActiveModal("");
-    setSelectedCard({});
-  };
-
   useEffect(() => {
     getWeather(coordinates, APIkey)
       .then((data) => {
@@ -137,39 +138,23 @@ function App() {
           onClose={closeActiveModal}
           onDelete={handleDeleteItem}
         />
-        {activeModal === "delete" && (
-          <div className="modal modal_opened">
-            <div className="modal__container modal__container_type_confirm">
-              <button
-                onClick={closeActiveModal}
-                type="button"
-                className="modal__close-button"
-              />
-              <div className="modal__confirm-content">
-                <p className="modal__confirm-text">
-                  Are you sure you want to delete this item?
-                  <br />
-                  This action is irreversible.
-                </p>
-              </div>
-              <div className="modal__confirm-buttons">
-                <button
-                  className="modal__confirm-delete-button"
-                  onClick={confirmDeleteItem}
-                >
-                  Yes, delete this item!
-                </button>
-                <button
-                  className="modal__confirm-cancel-button"
-                  onClick={closeActiveModal}
-                >
-                  Cancel
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>{" "}
+        <ItemModal
+          isOpen={activeModal === "preview"}
+          card={selectedCard}
+          onClose={closeActiveModal}
+          onDeleteClick={handleDeleteClick}
+        />
+
+        <ConfirmDeleteModal
+          isOpen={isDeleteModalOpen}
+          onClose={() => {
+            setIsDeleteModalOpen(false);
+            setCardToDelete(null);
+          }}
+          onConfirm={confirmDeleteItem}
+          cardName={cardToDelete?.name || ""}
+        />
+      </div>
     </CurrentTemperatureUnitContext.Provider>
   );
 }
