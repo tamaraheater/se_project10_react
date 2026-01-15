@@ -1,4 +1,3 @@
-import "react";
 import { NavLink } from "react-router-dom";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 

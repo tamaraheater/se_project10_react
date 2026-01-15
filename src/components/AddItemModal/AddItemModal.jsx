@@ -23,6 +23,7 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
 
   return (
     <ModalWithForm
+      buttonText="Add Garment"
       title="New garment:"
       name="new-card"
       isOpen={isOpen}
@@ -62,6 +63,7 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
         <label htmlFor="hot" className="modal__label modal__label_type_radio">
           {" "}
           <input
+            checked={values.weatherType === "hot"}
             id="hot"
             type="radio"
             className="modal__radio-input"
@@ -74,6 +76,7 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
         <label htmlFor="warm" className="modal__label modal__label_type_radio">
           {" "}
           <input
+            checked={values.weatherType === "warm"}
             id="warm"
             type="radio"
             className="modal__radio-input"
@@ -86,6 +89,7 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
         <label htmlFor="cold" className="modal__label modal__label_type_radio">
           {" "}
           <input
+            checked={values.weatherType === "cold"}
             id="cold"
             type="radio"
             className="modal__radio-input"

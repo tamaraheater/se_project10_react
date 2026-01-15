@@ -39,7 +39,7 @@ function App() {
     setActiveModal("add-garment");
   };
 
-  const onAddItem = (inputValues) => {
+  const onAddItem = (inputValues, handleReset) => {
     const newCardData = {
       name: inputValues.name,
       imageUrl: inputValues.imageUrl,
@@ -50,6 +50,7 @@ function App() {
       .then((data) => {
         setClothingItems([data, ...clothingItems]);
         closeActiveModal();
+        handleReset();
       })
       .catch(console.error);
   };
@@ -69,7 +70,6 @@ function App() {
       })
       .catch((error) => {
         console.error("Failed to delete item:", error);
-        alert("Failed to delete item. Please try again.");
       });
   };
 
