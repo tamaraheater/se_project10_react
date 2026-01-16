@@ -12,6 +12,7 @@ import Footer from "../Footer/Footer";
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnitContext";
 import { getItems, addItem, removeItem } from "../../utils/api";
+import ConfirmDeleteModal from "../ConfirmDeleteModal/ConfirmDeleteModal";
 
 function App() {
   const [weatherData, setWeatherData] = useState({
@@ -39,6 +40,10 @@ function App() {
     setActiveModal("add-garment");
   };
 
+  const closeActiveModal = () => {
+    setActiveModal("");
+  };
+
   const onAddItem = (inputValues, handleReset) => {
     const newCardData = {
       name: inputValues.name,
@@ -55,23 +60,18 @@ function App() {
       .catch(console.error);
   };
 
-  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const [cardToDelete, setCardToDelete] = useState(null);
 
-  // New handler
-  const handleDeleteClick = (card) => {
-    setCardToDelete(card);
-    setIsDeleteModalOpen(true);
+  const handleDeleteItem = (item) => {
+    setCardToDelete(item);
+    setActiveModal("confirmDelete");
   };
-  const confirmDeleteItem = () => {
-    if (!cardToDelete) return;
-
+  const confirmDelete = () => {
     removeItem(cardToDelete._id)
       .then(() => {
         setClothingItems((prevItems) =>
           prevItems.filter((item) => item._id !== cardToDelete._id)
         );
-        setIsDeleteModalOpen(false);
         setCardToDelete(null);
         closeActiveModal();
       })
@@ -136,23 +136,14 @@ function App() {
           isOpen={activeModal === "preview"}
           card={selectedCard}
           onClose={closeActiveModal}
-          onDelete={handleDeleteItem}
-        />
-        <ItemModal
-          isOpen={activeModal === "preview"}
-          card={selectedCard}
-          onClose={closeActiveModal}
-          onDeleteClick={handleDeleteClick}
+          onDeleteItem={handleDeleteItem}
         />
 
         <ConfirmDeleteModal
-          isOpen={isDeleteModalOpen}
-          onClose={() => {
-            setIsDeleteModalOpen(false);
-            setCardToDelete(null);
-          }}
-          onConfirm={confirmDeleteItem}
-          cardName={cardToDelete?.name || ""}
+          buttonText="Yes, delete this item"
+          isOpen={activeModal === "confirmDelete"}
+          onClose={closeActiveModal}
+          confirmDelete={confirmDelete}
         />
       </div>
     </CurrentTemperatureUnitContext.Provider>

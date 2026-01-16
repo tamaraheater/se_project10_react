@@ -1,4 +1,6 @@
-function ConfirmDeleteModal({ isOpen, onClose, onConfirm, cardName }) {
+import "../ModalWithForm/ModalWithForm.css";
+
+function ConfirmDeleteModal({ isOpen, onClose, confirmDelete }) {
   return (
     <div className={`modal ${isOpen ? "modal_opened" : ""}`}>
       <div className="modal__container modal__container_type_confirm">
@@ -18,7 +20,7 @@ function ConfirmDeleteModal({ isOpen, onClose, onConfirm, cardName }) {
         <div className="modal__confirm-buttons">
           <button
             className="modal__confirm-delete-button"
-            onClick={onConfirm}
+            onClick={confirmDelete}
             type="button"
           >
             Yes, delete this item

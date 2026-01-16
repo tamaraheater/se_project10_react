@@ -1,6 +1,6 @@
 import "./ItemModal.css";
 
-function ItemModal({ isOpen, onClose, card, onDeleteClick }) {
+function ItemModal({ isOpen, onClose, card, onDeleteItem }) {
   
   return (
     <div className={`modal ${isOpen ? "modal_opened" : ""}`}>
@@ -21,7 +21,7 @@ function ItemModal({ isOpen, onClose, card, onDeleteClick }) {
           <h3 className="modal__caption">{card.name}</h3>
 
           <button
-            onClick={() => onDeleteClick(card)}
+            onClick={() => onDeleteItem(card)}
             type="button"
             className="modal__delete-item-button"
           >
