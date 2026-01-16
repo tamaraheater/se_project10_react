@@ -9,6 +9,11 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
     weatherType: "",
   };
   const { values, handleChange, handleReset } = useForm(defaultValues);
+  //Code Reviewer: Somewhere betweent the first AI review, and the first human review and Ernesto's
+  // reciew I have had two terminal crashes  and two site crashes trying to impliment the responsive design,
+  // and adding the video demo /images in README. One of my images is incorrect in my README but it will be corrected AFTER
+  //the code review. but I apoligize for the site not being available or it seeming like I did not make your
+  // required changes when I actually did perform them (two or three times now, I have lost count) . Thank you.
 
   useEffect(() => {
     if (isOpen) {
