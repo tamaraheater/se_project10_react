@@ -4,12 +4,19 @@ import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import "./Header.css";
 import logo from "../../assets/logo.svg";
 import avatarDefault from "../../assets/avatar.svg";
+import { useState } from "react";
 
 function Header({ handleAddClick, weatherData }) {
   const currentDate = new Date().toLocaleString("default", {
     month: "long",
     day: "numeric",
   });
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuClick = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const username = "Terrance Tegegne";
   const avatar = avatarDefault;
@@ -24,7 +31,9 @@ function Header({ handleAddClick, weatherData }) {
           {currentDate}, {weatherData.city}
         </p>
       </div>
-      <div className="header__buttons-container">
+      <div
+        className={`header__buttons-container ${isMenuOpen ? "header__buttons-container_visible" : ""}`}
+      >
         <ToggleSwitch />
         <button
           onClick={handleAddClick}
@@ -33,21 +42,28 @@ function Header({ handleAddClick, weatherData }) {
         >
           + Add Clothes
         </button>
-        <NavLink className="header__nav-link" to="/profile">
-          <div className="header__user-name">{username}</div>
-        </NavLink>
+        <div>
+          <NavLink className="header__nav-link" to="/profile">
+            <div className="header__user-name">{username}</div>
+          </NavLink>
+        </div>
+        <div>
+          {avatar ? (
+            <img
+              className="header__avatar"
+              src={avatar || avatarDefault}
+              alt="user avatar"
+            />
+          ) : (
+            <span className="header__avatar sidebar__avatar_none">
+              {username?.[0]?.toUpperCase() || ""}
+            </span>
+          )}
+        </div>
       </div>
-      {avatar ? (
-        <img
-          className="header__avatar"
-          src={avatar || avatarDefault}
-          alt="user avatar"
-        />
-      ) : (
-        <span className="header__avatar sidebar__avatar_none">
-          {username?.[0]?.toUpperCase() || ""}
-        </span>
-      )}
+      <button className="header__mobile-button" onClick={handleMenuClick}>
+        Menu
+      </button>
     </header>
   );
 }
