@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3001";
+const baseUrl = "http://localhost:3000";
 
 const headers = {
   "Content-Type": "application/json",
@@ -24,10 +24,8 @@ export const addItem = ({ name, imageUrl, weather }) => {
 };
 
 export const removeItem = (itemID) => {
-    return fetch(`${baseUrl}/items/${itemID}`, {
-      method: "DELETE",
-      headers,
-    }).then(handleServerResponse);
+  return fetch(`${baseUrl}/items/${itemID}`, {
+    method: "DELETE",
+    headers,
+  }).then(handleServerResponse);
 };
-
-
