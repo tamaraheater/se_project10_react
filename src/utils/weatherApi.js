@@ -1,4 +1,4 @@
-import { handleServerResponse } from "./api.js";
+import { checkResponse } from "./api.js";
 
 export const getWeather = async ({ latitude, longitude }, APIkey) => {
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIkey}`;
