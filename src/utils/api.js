@@ -28,3 +28,6 @@ export const removeItem = (itemID) => {
     headers,
   }).then(checkResponse);
 };
+
+export { checkResponse as handleServerResponse };
+export { checkResponse };

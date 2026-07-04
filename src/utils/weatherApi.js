@@ -1,10 +1,9 @@
 import { checkResponse } from "./api.js";
 
-export const getWeather = async ({ latitude, longitude }, APIkey) => {
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIkey}`;
-
-  const res = await fetch(url);
-  return handleServerResponse(res);
+export const getWeather = (coordinates, APIkey) => {
+  return fetch(
+    `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.latitude}&lon=${coordinates.longitude}&units=imperial&appid=${APIkey}`,
+  ).then(checkResponse);
 };
 
 export const filterWeatherData = (data) => {

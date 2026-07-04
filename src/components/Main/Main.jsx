@@ -6,31 +6,32 @@ import WeatherCard from "../WeatherCard/WeatherCard";
 import ItemCard from "../ItemCard/ItemCard";
 import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnitContext";
 
-const Main = ({ weatherData, handleCardClick, clothingItems }) => {
+const Main = ({ weatherData, handleCardClick, clothingItems = [] }) => {
+  // ← default empty array
   const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
+
+  const filteredItems = clothingItems.filter((item) => {
+    return item.weather === weatherData.type;
+  });
 
   return (
     <main className="main">
       <WeatherCard weatherData={weatherData} />
+
       <section className="cards">
         <h2 className="cards__title">
           Today it's {weatherData.temp[currentTemperatureUnit]}°
           {currentTemperatureUnit} / You may want to wear:
         </h2>
+
         <ul className="cards__list">
-          {clothingItems
-            .filter((item) => {
-              return item.weather === weatherData.type;
-            })
-            .map((item) => {
-              return (
-                <ItemCard
-                  key={item._id}
-                  item={item}
-                  onCardClick={handleCardClick}
-                />
-              );
-            })}
+          {filteredItems.map((item) => (
+            <ItemCard
+              key={item._id}
+              item={item}
+              onCardClick={handleCardClick}
+            />
+          ))}
         </ul>
       </section>
     </main>
