@@ -1,21 +1,27 @@
 import { NavLink } from "react-router-dom";
-import { useContext } from "react";                     
-import { CurrentUserContext } from "../../contexts/CurrentUserContext";   
+import { useContext } from "react";
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import "./Header.css";
 import logo from "../../assets/logo.svg";
 import avatarDefault from "../../assets/avatar.svg";
 
-function Header({ handleAddClick, weatherData, isLoggedIn }) {   
+function Header({ handleAddClick, weatherData, isLoggedIn }) {
   const currentUser = useContext(CurrentUserContext);
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuClick = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const currentDate = new Date().toLocaleString("default", {
     month: "long",
     day: "numeric",
   });
 
-  const username = currentUser?.name || "Terrance Tegegne";   // fallback
+  const username = currentUser?.name || "Terrance Tegegne"; // fallback
   const avatar = currentUser?.avatar || avatarDefault;
 
   return (
@@ -29,12 +35,18 @@ function Header({ handleAddClick, weatherData, isLoggedIn }) {
         </p>
       </div>
 
-      <div className={`header__buttons-container ${isMenuOpen ? "header__buttons-container_visible" : ""}`}>
+      <div
+        className={`header__buttons-container ${isMenuOpen ? "header__buttons-container_visible" : ""}`}
+      >
         <ToggleSwitch />
 
         {isLoggedIn ? (
           <>
-            <button onClick={handleAddClick} type="button" className="header__add-clothes-button">
+            <button
+              onClick={handleAddClick}
+              type="button"
+              className="header__add-clothes-button"
+            >
               + Add Clothes
             </button>
 
@@ -44,7 +56,11 @@ function Header({ handleAddClick, weatherData, isLoggedIn }) {
 
             <div>
               {avatar && avatar !== avatarDefault ? (
-                <img className="header__avatar" src={avatar} alt="user avatar" />
+                <img
+                  className="header__avatar"
+                  src={avatar}
+                  alt="user avatar"
+                />
               ) : (
                 <span className="header__avatar sidebar__avatar_none">
                   {username?.[0]?.toUpperCase() || "?"}
