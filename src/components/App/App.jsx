@@ -8,6 +8,8 @@ import Main from "../Main/Main";
 import AddItemModal from "../AddItemModal/AddItemModal";
 import ItemModal from "../ItemModal/ItemModal";
 import Profile from "../Profile/Profile";
+import EditProfileModal from "../EditProfileModal/EditProfileModal";
+import { updateUser } from "../../utils/api";
 import Footer from "../Footer/Footer";
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnitContext";
@@ -29,6 +31,16 @@ function App() {
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
   const [currentUser, setCurrentUser] = useState({});
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isEditProfileModalOpen, setIsEditProfileModalOpen] = useState(false);
+
+  const handleUpdateUser = (userData) => {
+    updateUser(userData)
+      .then((updatedUser) => {
+        setCurrentUser(updatedUser);
+        setIsEditProfileModalOpen(false);
+      })
+      .catch(console.error);
+  };
 
   const handleToggleSwitchChange = () => {
     setCurrentTemperatureUnit(currentTemperatureUnit === "F" ? "C" : "F");
@@ -90,14 +102,14 @@ function App() {
       })
       .catch(console.error);
 
-      getItems()
+    getItems()
       .then((data) => {
         setClothingItems(data);
       })
       .catch((err) => {
         console.error("Error loading clothes:", err);
       });
-  }, []); 
+  }, []);
 
   return (
     <CurrentTemperatureUnitContext.Provider
@@ -110,7 +122,7 @@ function App() {
               handleAddClick={handleAddClick}
               weatherData={weatherData}
               isLoggedIn={isLoggedIn}
-            /> 
+            />
             <Routes>
               <Route
                 path="/"
@@ -136,6 +148,11 @@ function App() {
             </Routes>
             <Footer />
           </div>
+          <EditProfileModal
+            isOpen={isEditProfileModalOpen}
+            onClose={() => setIsEditProfileModalOpen(false)}
+            onUpdateUser={handleUpdateUser}
+          />
           <AddItemModal
             buttonText="Add Garment"
             onClose={closeActiveModal}
@@ -148,7 +165,6 @@ function App() {
             onClose={closeActiveModal}
             onDeleteItem={handleDeleteItem}
           />
-
           <ConfirmDeleteModal
             buttonText="Yes, delete this item"
             isOpen={activeModal === "confirmDelete"}
