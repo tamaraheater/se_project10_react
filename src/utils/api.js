@@ -22,6 +22,16 @@ export const addItem = ({ name, imageUrl, weather }) => {
   }).then(checkResponse);
 };
 
+export const updateUser = ({ name, avatar }) => {
+  return fetch(`${BASE_URL}/users/me`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ name, avatar }),
+  }).then(checkResponse);
+};
+
 export const removeItem = (itemID) => {
   return fetch(`${BASE_URL}/items/${itemID}`, {
     method: "DELETE",
