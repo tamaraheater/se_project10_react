@@ -142,6 +142,7 @@ function App() {
                     onCardClick={handleCardClick}
                     clothingItems={clothingItems}
                     handleAddClick={handleAddClick}
+                    onEditProfileClick={() => setIsEditProfileModalOpen(true)}
                   />
                 }
               />
