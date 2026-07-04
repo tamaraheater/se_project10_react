@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";                     
-import { CurrentUserContext } from "../../contexts/CurrentUserContext.jsx";   
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";   
 
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import "./Header.css";
