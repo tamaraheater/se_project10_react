@@ -90,12 +90,14 @@ function App() {
       })
       .catch(console.error);
 
-    getItems()
+      getItems()
       .then((data) => {
         setClothingItems(data);
       })
-      .catch(console.error);
-  }, []);
+      .catch((err) => {
+        console.error("Error loading clothes:", err);
+      });
+  }, []); 
 
   return (
     <CurrentTemperatureUnitContext.Provider

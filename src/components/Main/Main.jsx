@@ -7,10 +7,12 @@ import ItemCard from "../ItemCard/ItemCard";
 import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnitContext";
 
 const Main = ({ weatherData, handleCardClick, clothingItems = [] }) => {
-  // ← default empty array
   const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
 
-  const filteredItems = clothingItems.filter((item) => {
+  // Safety check
+  const itemsToShow = Array.isArray(clothingItems) ? clothingItems : [];
+
+  const filteredItems = itemsToShow.filter((item) => {
     return item.weather === weatherData.type;
   });
 
