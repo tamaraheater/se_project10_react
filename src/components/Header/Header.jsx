@@ -7,7 +7,7 @@ import "./Header.css";
 import logo from "../../assets/logo.svg";
 import avatarDefault from "../../assets/avatar.svg";
 
-function Header({ handleAddClick, weatherData, isLoggedIn }) {   // ← we'll pass isLoggedIn from App
+function Header({ handleAddClick, weatherData, isLoggedIn }) {   
   const currentUser = useContext(CurrentUserContext);
 
   const currentDate = new Date().toLocaleString("default", {
